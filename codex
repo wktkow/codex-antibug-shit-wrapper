@@ -466,7 +466,7 @@ fi
 
 SESSION_DIR=${CODEX_TMUX_DIR:-$PWD}
 SESSION_NAME=${CODEX_TMUX_SESSION:-codex-$(basename "$SESSION_DIR")}
-SESSION_NAME=$(printf '%s' "$SESSION_NAME" | tr -c '[:alnum:]_.-' '-')
+SESSION_NAME=$(printf '%s' "$SESSION_NAME" | tr -c '[:alnum:]_-' '-')
 
 if [ "$#" -gt 0 ]; then
   if session_exists "$SESSION_NAME"; then
